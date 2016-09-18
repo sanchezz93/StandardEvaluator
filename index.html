@@ -24,6 +24,7 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,8 +76,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <input type="file" multiple="" webkitdirectory="" id="fileURL">
-                    <ul id="fileOutput">
-                    </ul>
+                    <div id="checkboxes">
+                       <ul id="fileOutput">
+                        </ul> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,7 +118,7 @@
                 file = files[i];
                 extension = file.name.split(".").pop();
                 if(extension == "cpp"){
-                    output.innerHTML += "<li class='type-" + extension + "'>" + file.name + "</li>";
+                    output.innerHTML += "<li class='type-" + extension + "'>" + "<input type='checkbox'>" + file.name + "</li>";
                 }
                 
             }
